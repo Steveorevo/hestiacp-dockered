@@ -2,14 +2,15 @@
 
 > :warning: !!! Note: this repo is in progress; when completed, a release will appear in the release tab.
 
-This repo is for creating a Docker image for a localhost [Hestia Control Panel](https://www.hestiacp.com); an open source Control Panel for web hosting. The intent behind this image is for development and local testing only. It accomplishes this by hacking systemctl and does NOT follow the "Docker way" of composing seperate services because this is NOT intended as production server. This image has been culled and purposely doesn't include certain services that have little or no importance in a locel server environment such as ClamAV, fail2ban, spamassassin, DNS, etc. What is included are options for:
+This repo is for creating a Docker image for a localhost [Hestia Control Panel](https://www.hestiacp.com); an open source Control Panel for web hosting. The intent behind this image is for development and local testing only. It accomplishes this by hacking systemctl and does NOT follow the "Docker way" of composing seperate services because this is NOT intended as production server. This image has been culled and purposely doesn't include certain services that have little or no importance in a local server environment such as ClamAV, fail2ban, spamassassin, DNS, etc. What is included are options for:
 
 * Apache Server
 * Nginx Server
 * PHP versions 5.6 to 8.2
 * MariaDB, a MySQL compatible database server
+* Postgresql database server
 
-You can review the Dockerfile that builds the server and make adjustments to meet your needs. See the section "There are two options to choose from" for the examples of a 'lite' image (the default, and what you will find on docker hub) and an option to install a whole lot more (option #2). But be warned that not all features have been tested and may very well not work at all. Check the issues list for known issues; some of these maybe fix-able; others not so given the practicality behind a Docker environment.
+You can review the Dockerfile that builds the server and make adjustments to meet your needs. See the section "There are two options to choose from" for the examples of a 'lite' image (the default, and what you will find on docker hub) and an option to install a whole lot more (option #2). But be warned that not all features have been tested and may not work at all. Check the issues list for known issues; some of these maybe fix-able; others not so given the practicality behind a Docker environment.
 
 ## Prebuilt Docker image
 You can find a prebuilt Docker image based on this repo at https://hub.docker.com/repository/docker/steveorevo/hestiacp_dockered/general. This image is in the `lite` configuration (see option #1 in the Dockerfile); this image has been optimized for use by localhost web development environment users.
