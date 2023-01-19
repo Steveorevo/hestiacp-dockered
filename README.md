@@ -6,7 +6,7 @@ This repo is for creating a Docker image for a localhost [Hestia Control Panel](
 
 * Apache Server
 * Nginx Server
-* PHP versions 5.4 to 8.2
+* PHP versions 5.6 to 8.2
 * MariaDB, a MySQL compatible database server
 
 You can review the Dockerfile that builds the server and make adjustments to meet your needs. See the section "There are two options to choose from" for the examples of a 'lite' image (the default, and what you will find on docker hub) and an option to install a whole lot more (option #2). But be warned that not all features have been tested and may very well not work at all. Check the issues list for known issues; some of these maybe fix-able; others not so given the practicality behind a Docker environment.
