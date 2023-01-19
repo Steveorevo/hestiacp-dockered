@@ -2,7 +2,7 @@
 
 > :warning: !!! Note: this repo is in progress; when completed, a release will appear in the release tab.
 
-This repo is for creating a Docker image for a localhost [Hestia Control Panel](https://www.hestiacp.com); an open source Control Panel for web hosting. The intent behind localhost is for development and testing only. This image has been culled and purposely doesn't include certain services that have little or no importance in a locel server environment such as ClamAV, fail2ban, spamassassin, DNS, etc. What is included are options for:
+This repo is for creating a Docker image for a localhost [Hestia Control Panel](https://www.hestiacp.com); an open source Control Panel for web hosting. The intent behind this image is for development and local testing only. It accomplishes this by hacking systemctl and does NOT follow the "Docker way" of composing seperate services because this is NOT intended as production server. This image has been culled and purposely doesn't include certain services that have little or no importance in a locel server environment such as ClamAV, fail2ban, spamassassin, DNS, etc. What is included are options for:
 
 * Apache Server
 * Nginx Server
