@@ -46,7 +46,7 @@ service --status-all
 ---
 
 ## Visit your Hestia Control Panel
-You can visit your Hestia Control panel by visiting https://hestiacp.dev.cc. in your web browser. You'll need to accept the self-signed certificate to visit the site and use the following credentials to login:
+You can visit your Hestia Control panel by visiting https://hestiacp.dev.cc:8083. in your web browser. You'll need to accept the self-signed certificate to visit the site and use the following credentials to login:
 
 ```
 Username: admin
