@@ -52,6 +52,13 @@ RUN ./hst-install-ubuntu.sh --apache yes --phpfpm yes --multiphp yes --vsftpd ye
 # 2 - Run the fully patched installer silently
 #RUN ./hst-install-ubuntu.sh --apache yes --phpfpm yes --multiphp yes --vsftpd yes --proftpd no --named yes --mysql yes --postgresql yes --exim yes --dovecot yes --sieve no --clamav yes --spamassassin yes --iptables yes --fail2ban yes --quota yes --api yes --interactive no --with-debs no  --port '8083' --hostname 'hestiacp.dev.cc' --email 'info@domain.tld' --password 'password' --lang 'en' --force --interactive no || true
 
+
+# Fix phpPgAdmin issues; (discussion at: https://forum.hestiacp.com/t/project-to-run-hestia-in-docker/)
+RUN unlink /usr/share/phppgadmin/conf/config.inc.php
+RUN cp /etc/phppgadmin/config.inc.php /usr/share/phppgadmin/conf/config.inc.php
+RUN rm /usr/share/phppgadmin/classes/database/Connection.php
+RUN wget -O /usr/share/phppgadmin/classes/database/Connection.php https://raw.githubusercontent.com/Steveorevo/phppgadmin/master/classes/database/Connection.php
+
 # Expose the port to run the application
 EXPOSE 80
 EXPOSE 443
