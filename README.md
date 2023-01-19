@@ -9,7 +9,10 @@ This repo is for creating a Docker image for a localhost [Hestia Control Panel](
 * PHP versions 5.4 to 8.2
 * MariaDB, a MySQL compatible database server
 
-You can review the Dockerfile that builds the server and make adjustments to meet your needs. See the section "There are two options to choose from" for the examples of a 'lite' image (the default, and what you will find on docker hub) and an option to install a whole lot more (option #2). But be warned that not all features have been tested and may very well not work at all. Check the issues list for known issues; some of these maybe fix-able; others not so given the practicality behind a Docker environment. 
+You can review the Dockerfile that builds the server and make adjustments to meet your needs. See the section "There are two options to choose from" for the examples of a 'lite' image (the default, and what you will find on docker hub) and an option to install a whole lot more (option #2). But be warned that not all features have been tested and may very well not work at all. Check the issues list for known issues; some of these maybe fix-able; others not so given the practicality behind a Docker environment.
+
+## Prebuilt Docker image
+You can find a prebuilt Docker image based on this repo at https://hub.docker.com/repository/docker/steveorevo/hestiacp_dockered/general. This image is in the `lite` configuration (see option #1 in the Dockerfile); this image has been optimized for use by localhost web development environment users.
 
 ## Building and running in Docker
 Building the image is straight forward by following the commands below. A prebuilt 'lite' image can be found on Docker hub. In order to create HestiaCP, this repo needed to patch a number of items in the original HestiaCP Ubuntu install file; and the installer does this dynamically by downloading the latest HestiaCP installer and applying modifications. Also, it emulates and swaps out `systemctl` commands with some workarounds to get the installer to complete and keep HestiaCP happy. Review the Dockerfile for details.
