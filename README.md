@@ -6,7 +6,7 @@ This repo is for creating a Docker image for a localhost [Hestia Control Panel](
 
 * Apache Server
 * Nginx Server
-* PHP versions 5.6 to 8.2
+* PHP versions 8.2 down to 5.6
 * MariaDB, a MySQL compatible database server
 * Postgresql database server
 
