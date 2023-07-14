@@ -25,7 +25,7 @@ docker build -t hestiacp_dockered .
 
 ### To run the built image:
 ```
-docker run -d -p 80:80 -p 443:443 -p 8083:8083 -h cp.code.gdn --name hestiacp_dockered_1 -it hestiacp_dockered
+docker run -d -p 80:80 -p 443:443 -p 8083:8083 -h hestiacp.dev.cc --name hestiacp_dockered_1 -it hestiacp_dockered
 ```
 
 ### To access the docker command line:
